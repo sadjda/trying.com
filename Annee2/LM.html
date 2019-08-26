@@ -1,0 +1,76 @@
+
+<html>
+
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  
+    <title>Logique Mathematique </title>
+    <style>
+         body {
+         background-image:url("Image/mathcover1.jpg"); 
+         background-attachment:fixed;
+         background-size:cover;
+          }
+      </style> 
+    
+    
+    <script>
+     function Resoudre_Equation() {
+       
+     var a = window.prompt("Please enter coefficient of x²", "");
+     if (a!=null){ 
+     document.getElementById("a").value=a; }
+     
+     var b = window.prompt("Please enter coefficient of x", "");
+     if (b!=null){ 
+     document.getElementById("b").value=b; }
+     
+     var c = window.prompt("Please enter coefficient of the constant ", "");
+     if (c!=null){ 
+     document.getElementById("c").value=c; }
+   
+   
+     var D = (b*b) - (4 * a * c);
+      if (D < 0) {
+      alert("Unsolvable !!");
+    }
+
+         if (D == 0) {
+         var S = -b / (2 * a);
+         document.getElementById("d1").value=S;
+         }
+   
+          if (D >0 ){
+          var S1 = ( -b + Math.sqrt(D) ) / (2 * a),
+              S2 = ( -b - Math.sqrt(D) ) / (2 * a);
+              document.getElementById("d1").value=S1;
+              document.getElementById("d2").value=S2; }
+              
+  
+}
+
+    </script>
+  </head>
+
+
+
+  <body>
+  
+    <button id="submit" onclick="Resoudre_Equation()" >Solve My Quadratic Equation </button>
+    
+    <form name="input_form" action="javascript:Resoudre_Equation();">
+    <div id="input">
+    Equation : 
+    <input id="a" type="text" readonly > x<sup>2</sup> + 
+    <input id="b" type="text" readonly > x +
+    <input id="c" type="text" readonly > = 0
+    </div>
+    <div id="result">
+    Solutions : x1 <input type="text" id="d1" readonly>  
+    x2 <input type="text" id="d2" readonly>
+    </div>
+    </form>
+
+   
+  </body>
+</html>

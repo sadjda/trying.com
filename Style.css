@@ -1,0 +1,28 @@
+body{
+	background-color:gold;
+	color:purple;
+	font-family:arial;
+}
+p{
+	float:justify;
+	font-size:3em;
+	margin:30px;
+	margin-bottom:10px;
+	margin-top:10px;
+	border:10px dotted green;
+}
+.tulip{
+background-image:url("Image/October19.jpg");
+background-attachment:fixed;
+background-size:cover;
+}
+a{
+	color:red;
+}
+a:hover{
+	color:white;
+	font-size:5em;
+}
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
