@@ -1,0 +1,96 @@
+
+<html>
+<head>
+<title> Inscription En Formation </title>
+<script>
+function validation()
+{
+   
+	var A=document.getElementById("age");
+	var C1=document.getElementById("code1");
+	var C2=document.getElementById("code2");
+	
+	 if( C1.value.length < 2 ) {
+   alert("shortpassword!");
+   }
+   
+    if(C1.value !== C2.value ) {
+   alert("Veuillez entrer deux mots de passe egaux!");
+   }
+
+if ( (A.value < 18) || (A.value > 23) )
+{  window.alert("vous devez entrez un age entre 18 et 23 ans "); }
+  
+alert ("DONE!!!");
+
+         
+}
+
+</script>
+
+</head>
+<body bgcolor = "#FFBFD2">
+
+
+<h2> Formulaire d'inscription en formation license informatique </h2>
+
+<form name="form1" onsubmit="validation()" method="POST" action="formulairecopy.php">
+<table border = "5" bgcolor = #E3E3E3 >
+<tr>
+<td> <b> Nom et prenom   </td> 
+<td> <input type = "text" Name = "nom" size = "30" required> </td>
+</tr>
+<tr>
+<td> <b> Sexe </td>
+<td > Homme : <input type = "radio" value = "Homme" Name = "Sexe" Checked > <br>
+	  Femme : <input type = "radio" value = "Femme" Name = "Sexe" > </td>
+</tr>
+<tr>
+<td> <b> Age </td>
+<td> <input type = "number" id= "age"  name="age" size = "10" required > </td>
+</tr>
+<tr>
+<td> <b> Adresse </td>
+<td> <textarea Cols = "40" Rows = "5" Name="adresse"  required></textarea> </td>
+</tr>
+<tr>
+<td> <b> Wilaya </td>
+<td> <select name="wilaya"><option value ="1">1</option><option value ="1">1</option><option value ="2">2</option><option value ="3">3</option><option value ="4">4</option><option value ="5">5</option><option value ="6">6</option><option value ="7">7</option><option value ="8">8</option><option value ="9">9</option><option value ="10">10</option><option value ="12">12</option><option value ="13">13</option><option value ="14">14</option><option value ="15">15</option><option value ="16">16</option><option value ="17">17</option><option value ="18">18</option><option value ="19">19</option><option value ="20">20</option><option value ="21">21</option><option value ="22">22</option><option value ="23">23</option><option value ="24">24</option><option value ="25">25</option><option value ="26">26</option><option value ="27">27</option><option value ="28">28</option><option value ="29">29</option><option value ="30">30</option><option value ="31">31</option><option value ="32">32</option><option value ="33">33</option><option value ="34">34</option><option value ="35">35</option><option value ="36">36</option><option value ="37">37</option><option value ="38">38</option><option value ="39">39</option><option value ="40">40</option><option value ="41">41</option><option value ="42">42</option><option value ="43">43</option><option value ="44">44</option><option value ="45">45</option><option value ="46">46</option><option value ="47">47</option><option value ="48">48</option></select></td>
+</tr>
+<tr>
+<td> <b> Photos </td>
+<td> <input type = "file" Name = "Photos" </td>
+</tr>
+<tr>
+<td> <b> Activites sportive </td>
+<td>
+     Basketball <input type = "checkbox" Name = "Sport" Value = "Basketball" Checked  > <br>
+	 Handball <input type = "checkbox" Name = "Sport" Value = "Handball" > <br>
+	 Football <input type = "checkbox" Name = "Sport" Value = "Football" > <br>
+	 Autre <input type = "checkbox" Name = "Sport" Value = "Activites sportive" > </td>
+</tr>
+<tr>
+<td> <b> Code Secret </td>
+<td> <input type = "password" id = "code1" name="code2" required > </td>
+</tr>
+<tr>
+<td> <b> Confirmation de code secret </td>
+<td>  <input type = "password" id= "code2" name="code2" required > </td>
+</tr>
+<tr>
+<td> <b> Annee d'etude </td>
+<td> 2 eme Annee : <input type = "radio" Name = "Annee" Value = "2 eme Annee" Checked > <br>
+	 3 eme Annee : <input type = "radio" Name = "Annee" Value = "3 eme Annee" > </td>
+</tr>
+<tr>
+<td> <b> Effacer les informations</td>
+<td> <input type = "reset" Name = "Effacer" Value = "Delete" </td>
+</tr>
+<tr>
+<td> <b> Envoyer les informations </td>
+<td> <input type = "submit" Name = "Envoyer" Value = "Send!" </td>
+</tr>
+</table>
+</form>
+</body>
+</html>
